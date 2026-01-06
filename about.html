@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NainiaMotors - About</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">Nainia<span>Motors</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html" data-key="home">Home</a></li>
+        <li><a href="products.html" data-key="products">Cars</a></li>
+        <li><a href="categories.html" data-key="categories">Categories</a></li>
+        <li><a href="about.html" class="active" data-key="about">About</a></li>
+      </ul>
+      <div class="nav-icons">
+        <select id="lang-select">
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+          <option value="ar">AR</option>
+        </select>
+        <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+        <button class="cart-btn">
+          <i class="fas fa-shopping-cart"></i><span class="cart-count">0</span>
+        </button>
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+      </div>
+    </nav>
+
+    <div class="cart-sidebar">
+      <div class="cart-header">
+        <h3 data-key="cartTitle">Shopping Cart</h3>
+        <span class="close-cart">&times;</span>
+      </div>
+      <div class="cart-items"></div>
+      <div class="cart-total">
+        <span data-key="total">Total</span>:
+        <span id="cart-total-price">0 MAD</span>
+      </div>
+    </div>
+
+    <section
+      class="container"
+      style="display: flex; align-items: center; min-height: 80vh"
+    >
+      <div class="profile-card reveal">
+        <img
+          src="./src/Red Black Minimalist Exotic Cars Logo.png"
+          alt="Bilal Nainia"
+          class="profile-img"
+        />
+        <h1 style="color: var(--primary-color); margin-bottom: 10px">
+          Bilal Nainia
+        </h1>
+        <p style="color: #777; font-weight: 600; margin-bottom: 20px">
+          Management Student & Full Stack Developer
+        </p>
+
+        <p style="line-height: 1.8; margin-bottom: 20px">
+          Hello! I'm Bilal, an ambitious individual based in
+          <strong>Bouskoura</strong>. Currently, I am a first-year student in
+          Management (Gestion) while passionately pursuing a path in Digital
+          Development. <br /><br />
+          "NainiaMotors" combines my passion for technology, photography, and
+          the automotive world. My goal is to create seamless digital
+          experiences that are as elegant as a classic car and as fast as a
+          sports car.
+        </p>
+
+        <div class="contact-links">
+          <a href="https://wa.me/212687755912" target="_blank"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+          <a href="mailto:nainiabilal@gmail.com"
+            ><i class="fas fa-envelope"></i
+          ></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

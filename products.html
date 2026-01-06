@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NainiaMotors - Products</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">Nainia<span>Motors</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html" data-key="home">Home</a></li>
+        <li>
+          <a href="products.html" class="active" data-key="products">Cars</a>
+        </li>
+        <li><a href="categories.html" data-key="categories">Categories</a></li>
+        <li><a href="about.html" data-key="about">About</a></li>
+      </ul>
+      <div class="nav-icons">
+        <select id="lang-select">
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+          <option value="ar">AR</option>
+        </select>
+        <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+        <button class="cart-btn">
+          <i class="fas fa-shopping-cart"></i><span class="cart-count">0</span>
+        </button>
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+      </div>
+    </nav>
+
+    <div class="cart-sidebar">
+      <div class="cart-header">
+        <h3 data-key="cartTitle">Shopping Cart</h3>
+        <span class="close-cart">&times;</span>
+      </div>
+      <div class="cart-items"></div>
+      <div class="cart-total">
+        <span data-key="total">Total</span>:
+        <span id="cart-total-price">0 MAD</span>
+      </div>
+    </div>
+
+    <section class="container">
+      <h2 class="section-title" data-key="classic">Classic Cars</h2>
+      <div class="grid" id="classic-grid"></div>
+
+      <h2 class="section-title" style="margin-top: 50px" data-key="sport">
+        Sports Cars
+      </h2>
+      <div class="grid" id="sport-grid"></div>
+
+      <h2 class="section-title" style="margin-top: 50px" data-key="economy">
+        Economy Cars
+      </h2>
+      <div class="grid" id="economy-grid"></div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

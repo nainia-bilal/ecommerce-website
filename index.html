@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NainiaMotors - Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">Nainia<span>Motors</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active" data-key="home">Home</a></li>
+        <li><a href="products.html" data-key="products">Cars</a></li>
+        <li><a href="categories.html" data-key="categories">Categories</a></li>
+        <li><a href="about.html" data-key="about">About</a></li>
+      </ul>
+      <div class="nav-icons">
+        <select id="lang-select">
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+          <option value="ar">AR</option>
+        </select>
+        <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+        <button class="cart-btn">
+          <i class="fas fa-shopping-cart"></i><span class="cart-count">0</span>
+        </button>
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+      </div>
+    </nav>
+
+    <div class="cart-sidebar">
+      <div class="cart-header">
+        <h3 data-key="cartTitle">Shopping Cart</h3>
+        <span class="close-cart" style="cursor: pointer; font-size: 1.5rem"
+          >&times;</span
+        >
+      </div>
+      <div class="cart-items"></div>
+      <div class="cart-total">
+        <span data-key="total">Total</span>:
+        <span id="cart-total-price">0 MAD</span>
+      </div>
+    </div>
+
+    <header class="hero">
+      <h1 data-key="heroTitle">Drive Your Dream</h1>
+      <a href="products.html" class="btn" data-key="heroBtn">Shop Now</a>
+    </header>
+
+    <script src="script.js"></script>
+  </body>
+</html>
