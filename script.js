@@ -1,8 +1,7 @@
 // script.js
 
 // 1. (Data)
-const productsData = [
-  // Classic (6 Cars)
+const productsData = [  
   {
     id: 1,
     name: "Mercedes 300SL",
@@ -45,7 +44,7 @@ const productsData = [
     cat: "classic",
     img: "https://images.classic.com/vehicles/406acfa69719aed7a20fb8d58c2d6e86.jpeg?ar=16:9&fit=crop&h=338&w=600",
   },
-  // Sport (6 Cars)
+ 
   {
     id: 7,
     name: "Ferrari 488",
@@ -88,7 +87,7 @@ const productsData = [
     cat: "sport",
     img: "https://hips.hearstapps.com/hmg-prod/images/2025-porsche-911-gt3-103-6712782c2ac2e.jpg?crop=1xw:1xh;center,top",
   },
-  // Economy (6 Cars)
+  
   {
     id: 13,
     name: "Dacia Logan",
@@ -133,7 +132,7 @@ const productsData = [
   },
 ];
 
-// 2.(Translations)
+
 const langData = {
   en: {
     home: "Home",
@@ -186,14 +185,14 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let currentLang = localStorage.getItem("lang") || "en";
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Init Functions
+  
   updateCartCount();
   setupTheme();
   setupLanguage();
   renderProductsIfPage();
   setupScrollReveal();
 
-  // Event Listeners
+ 
   document.querySelector(".hamburger").addEventListener("click", () => {
     document.querySelector(".nav-links").classList.toggle("active");
   });
@@ -202,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".close-cart").addEventListener("click", toggleCart);
 });
 
-// --- Logic ---
+
 
 function toggleCart() {
   const sidebar = document.querySelector(".cart-sidebar");
@@ -251,7 +250,7 @@ function renderCartItems() {
 }
 
 function renderProductsIfPage() {
-  // If we are on products page
+  
   if (document.getElementById("classic-grid")) {
     renderGrid("classic", "classic-grid");
     renderGrid("sport", "sport-grid");
@@ -306,7 +305,7 @@ function setupLanguage() {
   langSelect.addEventListener("change", (e) => {
     currentLang = e.target.value;
     localStorage.setItem("lang", currentLang);
-    location.reload(); // Reload to refresh JS rendered content
+    location.reload();
   });
 }
 
@@ -333,6 +332,6 @@ function setupScrollReveal() {
         el.classList.add("active");
     });
   });
-  // Trigger once
+ 
   window.dispatchEvent(new Event("scroll"));
 }
